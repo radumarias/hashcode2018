@@ -5,6 +5,8 @@ package com.code42.hashcode.cars.model;
  */
 public class Ride {
 
+    private int id;
+
     private Point from;
     private Point to;
     private int earliestStart;
@@ -46,7 +48,8 @@ public class Ride {
     @Override
     public String toString() {
         return "Ride{" +
-                "from=" + from +
+                "id=" + id +
+                ", from=" + from +
                 ", to=" + to +
                 ", earliestStart=" + earliestStart +
                 ", latestFinish=" + latestFinish +
@@ -60,5 +63,13 @@ public class Ride {
 
     public void setDistance(int distance) {
         this.distance = distance;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

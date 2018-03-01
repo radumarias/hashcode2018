@@ -33,6 +33,7 @@ public class RequestReader {
         model.setRidesList(new Ride[model.getNumRides()]);
         for (int j = 0; j < model.getNumRides(); j++) {
             ride = new Ride();
+            ride.setId(j);
             vals = br.readLine().split(" ");
             ride.setFrom(new Point(Integer.parseInt(vals[0]), Integer.parseInt(vals[1])));
             ride.setTo(new Point(Integer.parseInt(vals[2]), Integer.parseInt(vals[3])));

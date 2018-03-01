@@ -1,7 +1,5 @@
 package com.code42.hashcode.cars.io;
 
-import com.code42.hashcode.cars.model.Slice;
-
 import java.io.BufferedWriter;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
@@ -19,17 +17,17 @@ public class SolutionWriter {
         this.os = os;
     }
 
-    public void writeNumSlices(int num) {
+    public void write(int[] rides) {
         ensureStreamIsInitiated();
 
-        System.out.println(num);
-        writer.println(num);
-    }
+        StringBuilder sb = new StringBuilder();
 
-    public void writeSlice(Slice slice) {
-        ensureStreamIsInitiated();
+        sb.append(rides.length);
 
-        String line = String.format("%d %d %d %d", slice.getR1(), slice.getC1(), slice.getR2(), slice.getC2());
+        for (int ride : rides) {
+            sb.append(" ").append(ride);
+        }
+        String line = sb.toString();
         System.out.println(line);
         writer.println(line);
     }
