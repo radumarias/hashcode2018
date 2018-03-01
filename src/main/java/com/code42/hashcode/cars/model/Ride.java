@@ -9,6 +9,7 @@ public class Ride {
     private Point to;
     private int earliestStart;
     private int latestFinish;
+    private int distance;
 
     public Point getFrom() {
         return from;
@@ -49,6 +50,15 @@ public class Ride {
                 ", to=" + to +
                 ", earliestStart=" + earliestStart +
                 ", latestFinish=" + latestFinish +
+                ", distance=" + distance +
                 '}';
+    }
+
+    public int getDistance() {
+        return distance;
+    }
+
+    public void setDistance(int distance) {
+        this.distance = distance;
     }
 }

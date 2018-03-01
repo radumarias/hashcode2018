@@ -38,6 +38,8 @@ public class RequestReader {
             ride.setTo(new Point(Integer.parseInt(vals[2]), Integer.parseInt(vals[3])));
             ride.setEarliestStart(Integer.parseInt(vals[4]));
             ride.setLatestFinish(Integer.parseInt(vals[5]));
+            ride.setDistance(Math.abs(ride.getFrom().getRow() - ride.getTo().getRow()) +
+                    Math.abs(ride.getFrom().getCol() - ride.getTo().getCol()));
             model.getRidesList()[j] = ride;
         }
 
