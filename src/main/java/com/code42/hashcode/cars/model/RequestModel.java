@@ -1,5 +1,7 @@
 package com.code42.hashcode.cars.model;
 
+import java.util.Arrays;
+
 /**
  * radu on 2/24/18 3:25 PM
  */
@@ -70,5 +72,18 @@ public class RequestModel {
 
     public void setRidesList(Ride[] ridesList) {
         this.ridesList = ridesList;
+    }
+
+    @Override
+    public String toString() {
+        return "RequestModel{" +
+                "rows=" + rows +
+                ", cols=" + cols +
+                ", vehicles=" + vehicles +
+                ", numRides=" + numRides +
+                ", bonus=" + bonus +
+                ", steps=" + steps +
+                ", ridesList=" + Arrays.toString(ridesList) +
+                '}';
     }
 }

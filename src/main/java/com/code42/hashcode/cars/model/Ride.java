@@ -41,4 +41,14 @@ public class Ride {
     public void setLatestFinish(int latestFinish) {
         this.latestFinish = latestFinish;
     }
+
+    @Override
+    public String toString() {
+        return "Ride{" +
+                "from=" + from +
+                ", to=" + to +
+                ", earliestStart=" + earliestStart +
+                ", latestFinish=" + latestFinish +
+                '}';
+    }
 }

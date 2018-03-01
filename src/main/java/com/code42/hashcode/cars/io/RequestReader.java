@@ -30,6 +30,7 @@ public class RequestReader {
 
         Ride ride;
         String[] vals;
+        model.setRidesList(new Ride[model.getNumRides()]);
         for (int j = 0; j < model.getNumRides(); j++) {
             ride = new Ride();
             vals = br.readLine().split(" ");
@@ -37,6 +38,7 @@ public class RequestReader {
             ride.setTo(new Point(Integer.parseInt(vals[2]), Integer.parseInt(vals[3])));
             ride.setEarliestStart(Integer.parseInt(vals[4]));
             ride.setLatestFinish(Integer.parseInt(vals[5]));
+            model.getRidesList()[j] = ride;
         }
 
         return model;
