@@ -17,7 +17,7 @@ public class SolutionWriter {
         this.os = os;
     }
 
-    public void write(int[] rides) {
+    public void write(Integer[] rides) {
         ensureStreamIsInitiated();
 
         StringBuilder sb = new StringBuilder();

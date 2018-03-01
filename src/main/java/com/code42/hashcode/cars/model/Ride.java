@@ -13,6 +13,7 @@ public class Ride {
     private int latestFinish;
     private int distance;
 
+
     public Point getFrom() {
         return from;
     }

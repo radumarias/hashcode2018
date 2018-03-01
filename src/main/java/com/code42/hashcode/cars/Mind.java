@@ -5,6 +5,7 @@ import com.code42.hashcode.cars.io.SolutionWriter;
 import com.code42.hashcode.cars.model.RequestModel;
 import com.code42.hashcode.cars.solver.Solver;
 import com.code42.hashcode.cars.solver.SolverImpl;
+import com.code42.hashcode.cars.solver.impl.RidesSolverErik;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -20,7 +21,7 @@ public class Mind {
 
     public Mind() {
         reader = new RequestReader();
-        solver = new SolverImpl();
+        solver = new RidesSolverErik();
     }
 
     public void doYouMagic(InputStream in, OutputStream out) throws IOException {
