@@ -3,7 +3,6 @@ package com.code42.hashcode.cars;
 import com.code42.hashcode.cars.io.RequestReader;
 import com.code42.hashcode.cars.io.SolutionWriter;
 import com.code42.hashcode.cars.solver.Solver;
-import com.code42.hashcode.cars.solver.impl.FullSliceSolverImpl;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -19,7 +18,7 @@ public class Mind {
 
     public Mind() {
         reader = new RequestReader();
-        solver = new FullSliceSolverImpl();
+//        solver = new FullSliceSolverImpl();
     }
 
     public void doYouMagic(InputStream in, OutputStream out) throws IOException {

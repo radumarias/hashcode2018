@@ -7,9 +7,11 @@ public class RequestModel {
 
     private int rows;
     private int cols;
-    private int minIngredients;
-    private int maxCells;
-    private Ingredient[][] pizzaCells;
+    private int vehicles;
+    private int numRides;
+    private int bonus;
+    private int steps;
+    private Ride[] ridesList;
 
     public RequestModel() {
     }
@@ -30,27 +32,43 @@ public class RequestModel {
         this.cols = cols;
     }
 
-    public int getMinIngredients() {
-        return minIngredients;
+    public int getVehicles() {
+        return vehicles;
     }
 
-    public void setMinIngredients(int minIngredients) {
-        this.minIngredients = minIngredients;
+    public void setVehicles(int vehicles) {
+        this.vehicles = vehicles;
     }
 
-    public int getMaxCells() {
-        return maxCells;
+    public int getNumRides() {
+        return numRides;
     }
 
-    public void setMaxCells(int maxCells) {
-        this.maxCells = maxCells;
+    public void setNumRides(int numRides) {
+        this.numRides = numRides;
     }
 
-    public Ingredient[][] getPizzaCells() {
-        return pizzaCells;
+    public int getBonus() {
+        return bonus;
     }
 
-    public void setPizzaCells(Ingredient[][] pizzaCells) {
-        this.pizzaCells = pizzaCells;
+    public void setBonus(int bonus) {
+        this.bonus = bonus;
+    }
+
+    public int getSteps() {
+        return steps;
+    }
+
+    public void setSteps(int steps) {
+        this.steps = steps;
+    }
+
+    public Ride[] getRidesList() {
+        return ridesList;
+    }
+
+    public void setRidesList(Ride[] ridesList) {
+        this.ridesList = ridesList;
     }
 }

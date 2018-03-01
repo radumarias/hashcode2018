@@ -1,7 +1,8 @@
 package com.code42.hashcode.cars.io;
 
-import com.code42.hashcode.cars.model.Ingredient;
+import com.code42.hashcode.cars.model.Point;
 import com.code42.hashcode.cars.model.RequestModel;
+import com.code42.hashcode.cars.model.Ride;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -19,17 +20,23 @@ public class RequestReader {
         BufferedReader br = new BufferedReader(new InputStreamReader(is));
         String line = br.readLine();
         String[] items = line.split(" ");
-        model.setRows(Integer.parseInt(items[0]));
-        model.setCols(Integer.parseInt(items[1]));
-        model.setMinIngredients(Integer.parseInt(items[2]));
-        model.setMaxCells(Integer.parseInt(items[3]));
-        model.setPizzaCells(new Ingredient[model.getRows()][model.getCols()]);
+        int i = 0;
+        model.setRows(Integer.parseInt(items[i++]));
+        model.setCols(Integer.parseInt(items[i++]));
+        model.setVehicles(Integer.parseInt(items[i++]));
+        model.setNumRides(Integer.parseInt(items[i++]));
+        model.setBonus(Integer.parseInt(items[i++]));
+        model.setSteps(Integer.parseInt(items[i++]));
 
-        for (int i = 0; i < model.getRows(); i++) {
-            line = br.readLine();
-            for (int j = 0; j < model.getCols(); j++) {
-                model.getPizzaCells()[i][j] = Ingredient.get(line.charAt(j));
-            }
+        Ride ride;
+        String[] vals;
+        for (int j = 0; j < model.getNumRides(); j++) {
+            ride = new Ride();
+            vals = br.readLine().split(" ");
+            ride.setFrom(new Point(Integer.parseInt(vals[0]), Integer.parseInt(vals[1])));
+            ride.setTo(new Point(Integer.parseInt(vals[2]), Integer.parseInt(vals[3])));
+            ride.setEarliestStart(Integer.parseInt(vals[4]));
+            ride.setLatestFinish(Integer.parseInt(vals[5]));
         }
 
         return model;
